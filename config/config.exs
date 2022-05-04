@@ -10,6 +10,10 @@ import Config
 config :vestemais,
   ecto_repos: [Vestemais.Repo]
 
+config :vestemais, Vestemais.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :vestemais, VestemaisWeb.Endpoint,
   url: [host: "localhost"],
