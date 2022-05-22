@@ -1,16 +1,18 @@
-defmodule Bifrost.Establishments.Establishment do
+defmodule Vestemais.Establishments.Establishment do
   use Ecto.Schema
   import Ecto.Changeset
 
   @primary_key {:id, :binary_id, autogenerate: true}
-  @required_params [:name, :cnpj, :category]
+  @required_params [:name, :cnpj, :phone, :lat, :long]
 
-  @derive {Jason.Encoder, only: [:id, :name, :cnpj, :category]}
+  @derive {Jason.Encoder, only: [:id, :name, :cnpj, :phone, :lat, :long]}
 
-  schema "stablishments" do
+  schema "establishments" do
     field :name, :string
     field :cnpj, :string
-    field :category, :string
+    field :phone, :string
+    field :lat, :string
+    field :long, :string
 
     timestamps()
   end

@@ -1,9 +1,7 @@
 defmodule Vestemais do
-  @moduledoc """
-  Vestemais keeps the contexts that define your domain
-  and business logic.
+  alias Vestemais.Establishments.Create, as: CreateEstablishment
+  alias Vestemais.Establishments.Get, as: GetEstablishment
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  defdelegate create_establishment(params), to: CreateEstablishment, as: :call
+  defdelegate get_all_establishments, to: GetEstablishment, as: :all
 end
