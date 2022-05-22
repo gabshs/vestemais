@@ -1,0 +1,18 @@
+{
+  "skip_files": [
+    "lib/vestemais/application.ex",
+    "lib/vestemais/repo.ex",
+    "lib/vestemais/mailer.ex",
+    "lib/vestemais_web.ex",
+    "lib/vestemais_web/channels/user_socket.ex",
+    "lib/vestemais_web/endpoint.ex",
+    "lib/vestemais_web/gettext.ex",
+    "lib/vestemais_web/guardian.ex",
+    "lib/vestemais_web/plugs/auth_access_pipeline.ex",
+    "lib/vestemais_web/plugs/auth_error_handler",
+    "lib/vestemais_web/router.ex",
+    "lib/vestemais_web/telemetry.ex",
+    "lib/vestemais_web/views/error_helpers.ex",
+    "test/support/"
+  ]
+}
