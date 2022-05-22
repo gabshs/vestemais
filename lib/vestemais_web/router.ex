@@ -7,6 +7,8 @@ defmodule VestemaisWeb.Router do
 
   scope "/api", VestemaisWeb do
     pipe_through :api
+
+    resources "/establishments", EstablishmentsController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development

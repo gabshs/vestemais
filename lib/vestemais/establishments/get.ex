@@ -1,10 +1,9 @@
-defmodule Vestemais.Establishment.Get do
+defmodule Vestemais.Establishments.Get do
   alias Vestemais.{Error, Repo}
   alias Vestemais.Establishments.Establishment
 
   def all do
     case Repo.all(Establishment) do
-      [] -> {:error, Error.build(:not_found, "No registered establishment")}
       establishments -> {:ok, establishments}
     end
   end

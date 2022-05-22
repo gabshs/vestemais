@@ -5,7 +5,9 @@ defmodule Vestemais.Repo.Migrations.CreateEstablishmentTable do
     create table(:establishments) do
       add :name, :string
       add :cnpj, :string
-      add :category, :string
+      add :phone, :string
+      add :lat, :string
+      add :long, :string
 
       timestamps()
     end

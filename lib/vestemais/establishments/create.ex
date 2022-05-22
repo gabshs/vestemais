@@ -9,7 +9,7 @@ defmodule Vestemais.Establishments.Create do
     |> handle_insert()
   end
 
-  defp handle_insert({:ok, %Establishment{} = establishment}) do: establishment
+  defp handle_insert({:ok, %Establishment{}} = establishment), do: establishment
 
   defp handle_insert({:error, reason}) do
     {:error, Error.build(:bad_request, reason)}
