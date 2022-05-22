@@ -23,24 +23,23 @@ defmodule Vestemais.Establishments.GetTest do
     end
   end
 
-  # describe "by_id/1" do
-  #   test "returns a marketplace when it exists with the given ID" do
-  #     field = build(:marketplace_field_params)
-  #     marketplace = build(:marketplace_params, marketplace_fields: [field])
+  describe "by_id/1" do
+    test "returns a establishment when it exists with the given ID" do
+      establishment = build(:establishment_params)
 
-  #     {:ok, valid_marketplace} = Vestemais.create_marketplace(marketplace)
+      {:ok, valid_establishment} = Vestemais.create_establishment(establishment)
 
-  #     response = Vestemais.get_marketplace_by_id(valid_marketplace.id)
+      response = Vestemais.get_establishment_by_id(valid_establishment.id)
 
-  #     assert {:ok, %Marketplace{}} = response
-  #   end
+      assert {:ok, %Establishment{}} = response
+    end
 
-  #   test "throws when no marketplace is found with the given ID" do
-  #     invalid_id = "0e2e9826-6eff-4165-85be-f269108bde04"
+    test "throws when no establishment is found with the given ID" do
+      invalid_id = "0e2e9826-6eff-4165-85be-f269108bde04"
 
-  #     response = Vestemais.get_marketplace_by_id(invalid_id)
+      response = Vestemais.get_establishment_by_id(invalid_id)
 
-  #     assert {:error, %Error{result: "Marketplace not found."}} = response
-  #   end
-  # end
+      assert {:error, %Error{result: "Establishment not found."}} = response
+    end
+  end
 end

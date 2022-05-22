@@ -21,4 +21,12 @@ defmodule VestemaisWeb.EstablishmentsController do
       |> render("create.json", establishment: establishment)
     end
   end
+
+  def show(conn, %{"id" => id}) do
+    with {:ok, establishment} <- Vestemais.get_establishment_by_id(id) do
+      conn
+      |> put_status(:ok)
+      |> render("establishment.json", establishment: establishment)
+    end
+  end
 end
