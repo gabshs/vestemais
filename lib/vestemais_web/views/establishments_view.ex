@@ -13,4 +13,8 @@ defmodule VestemaisWeb.EstablishmentsView do
       establishment: establishment
     }
   end
+
+  def render("establishment.json", %{establishment: %Establishment{} = establishment}) do
+    establishment
+  end
 end
